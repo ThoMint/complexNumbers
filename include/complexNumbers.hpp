@@ -1,4 +1,5 @@
 //  Thomas Hofmann 2020
+//	https://github.com/ThoMint/complexNumbers
 //  declarations of the class
 #pragma once
 #include <iostream>
@@ -38,11 +39,14 @@ public:		//constructors
 	complexNumber();								//standard constructor
 	complexNumber(T realPart, T imaginaryPart);		//construc a complex number with realPart and imaginaryPart
 	complexNumber(const complexNumber<T> &z);		//copy constructor
-public:		//getters (marked as const in order to use it with ref-to-const)
+public:		//getters (marked as const in order to use it with ref-to-const) and setters
 	T getRealPart() const;			//get the real part of this complex number
 	T getImaginaryPart() const;		//get the imaginary part of this complex number
 	T getAbsoluteValue() const;		//get the value of this complex number
 	T getPhase() const;				//get the phase of this complex number
+
+	void setRealPart(T realPart);				//set the real part of this complex number
+	void setImaginaryPart(T imaginaryPart);	//set the imaginary part of this complex number
 public:		//static tools (can be called without an object)
 	static complexNumber<T> conj(const complexNumber<T> &z);	//return the conjungated complex number of z
 	static complexNumber<T> polar(T value, T phase);			//construct a complex number from value and phase

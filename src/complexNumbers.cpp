@@ -1,4 +1,5 @@
 //  Thomas Hofmann 2020
+//  https://github.com/ThoMint/complexNumbers
 //  definitions of the class members
 #include <complexNumbers.hpp>
 
@@ -45,6 +46,18 @@ template <class T>
 T complexNumber<T>::getPhase() const
 {
     return atan(this->imaginaryPart/this->realPart);
+}
+
+template <class T>
+void complexNumber<T>::setRealPart(T realPart)
+{
+    this->realPart = realPart;
+}
+
+template <class T>
+void complexNumber<T>::setImaginaryPart(T imaginaryPart)
+{
+    this->imaginaryPart = imaginaryPart;
 }
 
 template <class T>
